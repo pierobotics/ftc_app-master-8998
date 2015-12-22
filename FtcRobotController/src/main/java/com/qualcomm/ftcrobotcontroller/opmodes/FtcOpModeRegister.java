@@ -51,19 +51,17 @@ public class FtcOpModeRegister implements OpModeRegister {
      * register your op modes here.
      * The first parameter is the name of the op mode
      * The second parameter is the op mode class property
-     *
      * If two or more op modes are registered with the same name, the app will display an error.
      */
 
-    manager.register("NullOp", NullOp.class);
+    manager.register("Nullop",NullOp. class);
+    manager.register("FourWheelDrive", FourWheelDrive. class);
+    manager.register("PieTominsR", PieTominsR. class);
+    manager.register("PieTominsB", PIeTominsB. class);
+    manager.register("TestDrive2", TestDrive2. class);
+    manager.register("Servosutotest",Servoautotest. class);
+    manager.register("PieTonomousMode",PieTonomousMode. class);
 
-    manager.register("K9TeleOp", K9TeleOp.class);
-    manager.register ("PushBotAuto", PushBotAuto.class);
-    manager.register ("PushBotManual", PushBotManual.class);
-    manager.register ("HelloWorld", HelloWorld.class);
-    manager.register ("AmazingServo", AmazingServo.class);
-    manager.register ("moter123", moter123.class);
-    manager.register ("AmazingMotors", AmazingMotors.class);
 
     /*
      * Uncomment any of the following lines if you want to register an op mode.
