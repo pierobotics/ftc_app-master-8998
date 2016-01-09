@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 public class MainHardware extends OpMode {
     Servo servo1;
+    //Servo servo2;
     DcMotor left1;
     DcMotor right1;
     DcMotor left2;
@@ -18,6 +19,7 @@ public class MainHardware extends OpMode {
     @Override
     public void init() {
 
+        //servo2 = hardwareMap.servo.get("servo2");
         servo1 = hardwareMap.servo.get("servo1");
         left1 = hardwareMap.dcMotor.get("motor1");
         right1 = hardwareMap.dcMotor.get("motor2");
@@ -41,11 +43,8 @@ public class MainHardware extends OpMode {
 
     public void set_servo_power ( double MAX_POSITION, double MIN_POSITION){
         {
-        servo1.setPosition(MAX_POSITION);
-        servo1.setPosition(MIN_POSITION);
-
-
-
+            servo1.setPosition(MAX_POSITION);
+            servo1.setPosition(MIN_POSITION);
 
         }
     }

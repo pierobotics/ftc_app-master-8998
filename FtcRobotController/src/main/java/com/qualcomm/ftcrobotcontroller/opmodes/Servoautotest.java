@@ -8,72 +8,18 @@ public class Servoautotest extends MainHardware {
 
     @Override
     public void loop() {
-        switch (state){
-            case 0:
-                servo_set_power(1.0,0.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
 
-            case 1:
-                servo_set_power(1.0,0.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 2:
-                servo_set_power(0.0,1.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 3:
-                servo_set_power(1.0,0.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 4:
-                servo_set_power(0.0,1.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 5:
-                servo_set_power(1.0,0.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 6:
-                servo_set_power(0.0,1.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 7:
-                servo_set_power(1.0,0.0);
-                new counter(1000);
-                runner++;
-                state ++;
-                break;
-
-            case 8:
-                if (runner == 0){
-                    state++;
-                }
-
-
-            default:
-                break;
+        if (this.time > 1.00 && this.time <= 5.00) {
+            set_servo_power(1.0, 0.0);
         }
+        else if (this.time > 5.25 && this.time <= 7.00) {
+            set_servo_power(0.0, 1.0);
+        }
+        else {
+            set_servo_power(0.0, 0.0);
+        }
+
+        telemetry.addData("program finish", "YAY: " + Double.toString(this.time));
 
     }
 }

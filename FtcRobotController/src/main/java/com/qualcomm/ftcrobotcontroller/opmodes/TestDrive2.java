@@ -13,6 +13,8 @@ public class TestDrive2 extends OpMode {
     private DcMotor left2;
     private DcMotor right2;
     private Servo servo1;
+    private Servo servo2;
+
 
     @Override
     public void init() {
@@ -22,9 +24,10 @@ public class TestDrive2 extends OpMode {
         right2 = hardwareMap.dcMotor.get("motor4");
         left1.setDirection(DcMotor.Direction.REVERSE);
         left2.setDirection(DcMotor.Direction.REVERSE);
-        servo1 = hardwareMap.servo. get("servo1");
-        System.out.println("hiinti");
-
+        servo1 = hardwareMap.servo.get("servo1");
+        servo1.setPosition(Servo.MIN_POSITION);
+        servo2 = hardwareMap.servo.get("servo2");
+        servo2.setPosition(Servo.MIN_POSITION);
 
 
     }
@@ -35,21 +38,16 @@ public class TestDrive2 extends OpMode {
         left2.setPower(gamepad1.left_stick_y);
         right1.setPower(gamepad1.right_stick_y);
         right2.setPower(gamepad1.right_stick_y);
-        System.out.println("hi");
 
 
-        if(gamepad1.left_bumper) {
+        if (gamepad2.left_bumper){
             servo1.setPosition(Servo.MAX_POSITION);
         }
 
-        if(gamepad1.right_bumper) {
+        if (gamepad2.right_bumper){
             servo1.setPosition(Servo.MIN_POSITION);
-        }
-
-
 
 
         }
-
     }
-
+}
