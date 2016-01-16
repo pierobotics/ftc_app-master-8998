@@ -58,13 +58,5 @@ public class MainHardware extends OpMode {
             //servo1.setPosition(MIN_POSITION);
 
 
-            try{
-                dropper = hardwareMap.dcMotor.get("dropper");
-            }
-            catch (Exception p_exception){
-                dropper = null;
-            }
-
-
         }
     }
