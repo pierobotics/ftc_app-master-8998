@@ -55,12 +55,14 @@ public class FtcOpModeRegister implements OpModeRegister {
      */
 
     manager.register("Nullop",NullOp. class);
-    manager.register("FourWheelDrive", FourWheelDrive. class);
-    manager.register("PieTominsR", PieTominsR. class);
-    manager.register("PieTominsB", PIeTominsB. class);
-    manager.register("TestDrive2", TestDrive2. class);
-    manager.register("Servosutotest",Servoautotest. class);
-    manager.register("AutoTimeMode",AutoTimeMode. class);
+    manager.register("Drive",PieDriving. class);
+    manager.register("AutomonousBlue",AutoTimeMode. class);
+    manager.register("AutomonousRed" , AutoTimeMode1. class);
+    //manager.register("TestDrive", TestDrive2. class);
+    //manager.register("FourWheelDrive", FourWheelDrive. class);
+    //manager.register("Servosutotest",Servoautotest. class);
+    //manager.register("PieTominsR", PieTominsR. class);
+    //manager.register("PieTominsB", PIeTominsB. class);
 
 
     /*

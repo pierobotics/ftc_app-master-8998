@@ -12,8 +12,10 @@ public class TestDrive2 extends OpMode {
     private DcMotor right1;
     private DcMotor left2;
     private DcMotor right2;
-    private Servo servo1;
-    private Servo servo2;
+    private DcMotor dropper;
+
+    //private Servo servo1;
+    //private Servo servo2;
 
 
     @Override
@@ -24,11 +26,11 @@ public class TestDrive2 extends OpMode {
         right2 = hardwareMap.dcMotor.get("motor4");
         left1.setDirection(DcMotor.Direction.REVERSE);
         left2.setDirection(DcMotor.Direction.REVERSE);
-        servo1 = hardwareMap.servo.get("servo1");
-        servo1.setPosition(Servo.MIN_POSITION);
-        servo2 = hardwareMap.servo.get("servo2");
-        servo2.setPosition(Servo.MIN_POSITION);
-
+        dropper = hardwareMap.dcMotor.get("dropper");
+        //servo1 = hardwareMap.servo.get("servo1");
+        //servo1.setPosition(Servo.MIN_POSITION);
+        //servo2 = hardwareMap.servo.get("servo2");
+        //servo2.setPosition(Servo.MIN_POSITION);
 
     }
 
@@ -39,13 +41,23 @@ public class TestDrive2 extends OpMode {
         right1.setPower(gamepad1.right_stick_y);
         right2.setPower(gamepad1.right_stick_y);
 
+        dropper.setPower(gamepad2.right_stick_y);
 
-        if (gamepad2.left_bumper){
-            servo1.setPosition(Servo.MAX_POSITION);
+
+
+
+
+
+
+
+
+
+        if (gamepad2.a){
+          //  servo1.setPosition(Servo.MAX_POSITION);
         }
 
-        if (gamepad2.right_bumper){
-            servo1.setPosition(Servo.MIN_POSITION);
+        if (gamepad2.b){
+            //servo1.setPosition(Servo.MIN_POSITION);
 
 
         }

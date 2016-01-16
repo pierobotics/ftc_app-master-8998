@@ -3,7 +3,7 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
 /**
  * Created by robots on 1/6/2016.
  */
-public class AutoTimeMode extends MainHardware {
+public class AutoTimeMode1 extends MainHardware {
 
     @Override
     public void loop() {
@@ -15,6 +15,9 @@ public class AutoTimeMode extends MainHardware {
         if (this.time > 1.00 && this.time <= 4.00) {
             set_drive_power(-1.0, -1.0);
         }
+        else if (this.time > 4.20 && this.time <= 4.80) {
+            set_drive_power(-0.2, 0.2);
+        }
         else if (this.time > 5.00 && this.time <= 6.00) {
             set_drive_power(-1.0, -1.0);
         }
@@ -22,7 +25,7 @@ public class AutoTimeMode extends MainHardware {
             set_drive_power(0.0, 0.0);
             telemetry.addData("finished" , "auto" );
         }
-            telemetry.addData("time", "running: " + Double.toString(this.time));
+        telemetry.addData("time", "running: " + Double.toString(this.time));
 
     }
 }
